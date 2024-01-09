@@ -1,0 +1,20 @@
+.grid-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+}
+
+#title {
+    text-align: center;
+}
+
+/* .weights {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    font-size: smaller;
+} */
+
+table, th, td {
+  border:1px solid black;
+}
