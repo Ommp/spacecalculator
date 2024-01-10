@@ -4,44 +4,41 @@ const weight = document.getElementById("weight");
 const submit = document.getElementById("submit-button");
 
 //weight number elements
-const sunText = document.getElementById("sun-weight");
-const mercuryText = document.getElementById("mercury-weight");
-const venusText = document.getElementById("venus-weight");
-const earthText = document.getElementById("earth-weight");
-const earthmoonText = document.getElementById("earthmoon-weight");
-const marsText = document.getElementById("mars-weight");
-const jupiterText = document.getElementById("jupiter-weight");
-const saturnText = document.getElementById("saturn-weight");
-const uranusText = document.getElementById("uranus-weight");
-const neptuneText = document.getElementById("neptune-weight");
-const plutoText = document.getElementById("pluto-weight");
 
-//weights
-const sun = 27.01;
-const mercury = 0.38;
-const venus = 0.91;
-const earth = 1;
-const earthmoon = 0.166;
-const mars = 0.38;
-const jupiter = 2.34;
-const saturn = 1.06;
-const uranus = 0.92;
-const neptune = 1.19;
-const pluto = 0.06;
+const celestialBodyTexts = {
+    sun: document.getElementById("sun-weight"),
+    mercury: document.getElementById("mercury-weight"),
+    venus: document.getElementById("venus-weight"),
+    earth: document.getElementById("earth-weight"),
+    earthmoon: document.getElementById("earthmoon-weight"),
+    mars: document.getElementById("mars-weight"),
+    jupiter: document.getElementById("jupiter-weight"),
+    saturn: document.getElementById("saturn-weight"),
+    uranus: document.getElementById("uranus-weight"),
+    neptune: document.getElementById("neptune-weight"),
+    pluto: document.getElementById("pluto-weight")
+}
 
+const celestialBodyWeights = {
+    sun: 27.01,
+    mercury: 0.38,
+    venus: 0.91,
+    earth: 1,
+    earthmoon: 0.166,
+    mars: 0.38,
+    jupiter: 2.34,
+    saturn: 1.06,
+    uranus: 0.92,
+    neptune: 1.19,
+    pluto: 0.06
+}
 
 function updateWeights() {
-    sunText.textContent = weight.value*sun;
-    mercuryText.textContent = weight.value*mercury;
-    venusText.textContent = weight.value*venus;
-    earthText.textContent = weight.value*earth;
-    earthmoonText.textContent = weight.value*earthmoon;
-    marsText.textContent = weight.value*mars;
-    jupiterText.textContent = weight.value*jupiter;
-    saturnText.textContent = weight.value*saturn;
-    uranusText.textContent = weight.value*uranus;
-    neptuneText.textContent = weight.value*neptune;
-    plutoText.textContent = weight.value*pluto;
+    for (const key in celestialBodyTexts) {
+        if (Object.hasOwnProperty.call(celestialBodyTexts, key)) {
+            celestialBodyTexts[key].textContent = (weight.value * celestialBodyWeights[key]).toFixed(2);
+        }
+    }
 }
 
 submit.addEventListener("click", updateWeights);
