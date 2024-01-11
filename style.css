@@ -1,20 +1,103 @@
-.grid-container {
+body {
+    background-color: rgb(31, 31, 31);
+    color: rgb(225, 225, 225);
+ background: rgb(0,0,78);
+background: linear-gradient(0deg, rgb(3, 0, 30) 0%, rgba(3,0,20,1) 30%, rgba(3,0,20,1) 60%, rgba(3,0,30,1) 100%);
+
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+#title-image-container {
+    background: url(assets/pexels-kai-pilger-1341279.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 15vh;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+}
+
+
+#grid-container {
     display: grid;
     place-items: center;
     grid-template-columns: 1fr;
+    font-family: 'Trispace', sans-serif;
+}
+
+#title-image {
+    max-width: 100%;
+    grid-column: 2;
 }
 
 #title {
     text-align: center;
+    font-weight: 300;
+    text-shadow: -3px -2px 25px pink;
+    margin-block-start: 0.30em;
 }
 
-/* .weights {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    font-size: smaller;
-} */
+th, td {
+  /* border:1px solid rgb(99, 99, 99); */
+  
+}
 
-table, th, td {
-  border:1px solid black;
+#enter-weight {
+    font-family: 'Space Mono';
+}
+
+#weight {
+    width: 5rem;
+    background-color: rgb(60, 60, 60);
+    color: rgb(218, 218, 218);
+    font-size: 2rem;
+    border: 2px solid rgb(29, 29, 29);
+    border-radius: 4px;
+}
+
+#submit-button {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-inline: 30px;
+
+    background-color: rgb(60, 60, 60);
+    color: rgb(218, 218, 218);
+    border: 2px solid rgb(29, 29, 29);
+    border-radius: 4px;
+    font-size: 1.25rem;
+    /* font-family: 'Trispace', sans-serif; */
+    font-weight: bold;
+}
+
+#gradientbody {
+    /* height: 98.2vh; */
+}
+table {
+    font-family: 'monospace';
+    background-color: rgb(35, 35, 35);
+    border:2px solid (35, 35, 35);
+    border-radius: 4px;
+}
+
+th {
+    background-color: rgb(35, 35, 35);
+}
+
+td {
+    background-color: rgb(60, 60, 60);
+}
+
+@media screen and (min-width: 500px) {
+    #title-image-container {
+    font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #title-image-container {
+    font-size: 0.8rem;
+    }
 }
