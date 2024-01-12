@@ -1,103 +1,120 @@
+html,
 body {
-    background-color: rgb(31, 31, 31);
-    color: rgb(225, 225, 225);
- background: rgb(0,0,78);
-background: linear-gradient(0deg, rgb(3, 0, 30) 0%, rgba(3,0,20,1) 30%, rgba(3,0,20,1) 60%, rgba(3,0,30,1) 100%);
-
-box-sizing: border-box;
-padding: 0;
-margin: 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
-#title-image-container {
-    background: url(assets/pexels-kai-pilger-1341279.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 15vh;
-    width: 100%;
-    font-size: 0.9rem;
-    padding: 10px;
-}
-
-
-#grid-container {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr;
-    font-family: 'Trispace', sans-serif;
-}
-
-#title-image {
-    max-width: 100%;
-    grid-column: 2;
-}
-
-#title {
-    text-align: center;
-    font-weight: 300;
-    text-shadow: -3px -2px 25px pink;
-    margin-block-start: 0.30em;
-}
-
-th, td {
-  /* border:1px solid rgb(99, 99, 99); */
-  
-}
-
-#enter-weight {
-    font-family: 'Space Mono';
-}
-
-#weight {
-    width: 5rem;
-    background-color: rgb(60, 60, 60);
-    color: rgb(218, 218, 218);
-    font-size: 2rem;
-    border: 2px solid rgb(29, 29, 29);
-    border-radius: 4px;
-}
-
-#submit-button {
-    margin-top: 8px;
-    margin-bottom: 20px;
-    padding: 10px;
-    padding-inline: 30px;
-
-    background-color: rgb(60, 60, 60);
-    color: rgb(218, 218, 218);
-    border: 2px solid rgb(29, 29, 29);
-    border-radius: 4px;
-    font-size: 1.25rem;
-    /* font-family: 'Trispace', sans-serif; */
-    font-weight: bold;
+body {
+  background-color: rgb(31, 31, 31);
+  color: rgb(225, 225, 225);
+  background: rgb(15, 20, 46);
+  background: linear-gradient(
+    0deg,
+    rgba(5, 10, 36, 1) 0%,
+    rgba(1, 3, 54, 1) 35%,
+    rgba(1, 3, 54, 1) 65%,
+    rgba(5, 10, 36, 1) 100%
+  );
 }
 
 #gradientbody {
-    /* height: 98.2vh; */
+  min-height: 100vh;
 }
+
+#grid-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#title-image-container {
+  background: url(assets/pexels-francesco-ungaro-998641.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 5vh;
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title-image {
+  max-width: 100%;
+}
+
+#title {
+  text-align: center;
+  font-weight: 300;
+  text-shadow: -3px -2px 10px pink;
+  margin-block-start: 0.3em;
+  color: #dce2df;
+  font-family: "Trispace", sans-serif;
+}
+
+th,
+td {
+  /* border:1px solid rgb(99, 99, 99); */
+}
+
+#enter-weight {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.75rem;
+}
+
+#weight {
+  width: 5rem;
+  background-color: rgb(60, 60, 60);
+  color: rgb(218, 218, 218);
+  font-size: 2rem;
+  border: 3px solid rgb(29, 29, 29);
+  border-radius: 4px;
+}
+
+#submit-button {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-inline: 30px;
+
+  background-color: rgb(60, 60, 60);
+  color: rgb(218, 218, 218);
+  border: 3px solid rgb(29, 29, 29);
+  border-radius: 4px;
+  font-size: 1.25rem;
+  font-family: "Trispace", sans-serif;
+  font-weight: bold;
+}
+
+#submit-button:hover {
+  cursor: pointer;
+}
+
 table {
-    font-family: 'monospace';
-    background-color: rgb(35, 35, 35);
-    border:2px solid (35, 35, 35);
-    border-radius: 4px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(35, 35, 35);
+  font-size: 1.25rem;
 }
 
 th {
-    background-color: rgb(35, 35, 35);
+  background-color: rgb(35, 35, 35);
 }
 
 td {
-    background-color: rgb(60, 60, 60);
+  background-color: rgb(60, 60, 60);
 }
 
 @media screen and (min-width: 500px) {
-    #title-image-container {
+  #title-image-container {
     font-size: 1.1rem;
-    }
+  }
 }
 
 @media screen and (max-width: 300px) {
-    #title-image-container {
+  #title-image-container {
     font-size: 0.8rem;
-    }
+  }
 }
